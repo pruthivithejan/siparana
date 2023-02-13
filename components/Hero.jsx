@@ -36,9 +36,8 @@ export default function CallToActionWithIllustration() {
           කලාප අධ්‍යාපන කාර්යාලය - අම්පාර
         </Heading>
         <Text color={"gray.500"} maxW={"3xl"}>
-          Never miss a meeting. Never be late for one too. Keep track of your
-          meetings and receive smart reminders in appropriate times. Read your
-          smart “Daily Agenda” every morning.
+          දැනුම තුළින් යහපත් සමාජයක් උදෙසා, අම්පාර අධ්‍යාපන කලාපයේ පමණක් නොව
+          මුලු සිරිලක දැයේ දරුවන්හට පිදෙන අධ්‍යාපන සත්කාරයයි!
         </Text>
         <Flex w={"full"}>
           <Illustration

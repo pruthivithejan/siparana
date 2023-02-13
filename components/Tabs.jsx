@@ -22,13 +22,14 @@ import {
   Text,
   CardFooter,
   Button,
+  Flex,
 } from "@chakra-ui/react";
 import { DownloadIcon, ViewIcon } from "@chakra-ui/icons";
 
 const TabListView = () => {
   return (
     <Tabs isFitted variant="soft-rounded" colorScheme="green">
-      <TabList mb="1em">
+      <TabList mb="1em" overflowX="scroll">
         {Classes.map((cl, index) => {
           return <Tab key={index}>{cl.class}</Tab>;
         })}
@@ -145,27 +146,33 @@ const DownloadCard = (props) => {
           <Text py="2">{props.description}.</Text>
         </CardBody>
 
-        <CardFooter gap="1em">
-          <Button
-            as="a"
-            leftIcon={<DownloadIcon />}
-            variant="solid"
-            colorScheme="blue"
-            target="_blank"
-            href={`https://drive.google.com/uc?export=download&id=${props.link}`}
+        <CardFooter>
+          <Flex
+            gap="1em"
+            flexDirection={{ base: "column", sm: "row", md: "row" }}
+            minW={{ base: "100%", sm: "200px" }}
           >
-            බාගත කරගන්න
-          </Button>
-          <Button
-            as="a"
-            leftIcon={<ViewIcon />}
-            variant="outline"
-            colorScheme="blue"
-            target="_blank"
-            href={`https://drive.google.com/file/d/${props.link}/view`}
-          >
-            විවෘත කරන්න
-          </Button>
+            <Button
+              as="a"
+              leftIcon={<DownloadIcon />}
+              variant="solid"
+              colorScheme="blue"
+              target="_blank"
+              href={`https://drive.google.com/uc?export=download&id=${props.link}`}
+            >
+              බාගත කරගන්න
+            </Button>
+            <Button
+              as="a"
+              leftIcon={<ViewIcon />}
+              variant="outline"
+              colorScheme="blue"
+              target="_blank"
+              href={`https://drive.google.com/file/d/${props.link}/view`}
+            >
+              විවෘත කරන්න
+            </Button>
+          </Flex>
         </CardFooter>
       </Stack>
     </Card>
