@@ -26,7 +26,7 @@ const Hero = () => {
               quality={100}
               style={{ objectFit: "contain" }}
               fill
-              src="/classroom.png"
+              src="/illustration.png"
               alt="Classroom illustration"
             />
           </div>

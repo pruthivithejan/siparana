@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import TabList from "@/components/TabList";
 
 export const metadata = {
   title: "සිප් අරණ",
@@ -62,6 +63,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <Hero />
+          <TabList />
           {children}
         </ThemeProvider>
       </body>
