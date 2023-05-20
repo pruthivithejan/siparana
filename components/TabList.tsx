@@ -8,6 +8,7 @@ import {
   Grade10,
   Grade11,
 } from "@/lib/content";
+import { CardDemo } from "./DowloadCard";
 
 const TabList = () => {
   return (
@@ -23,7 +24,7 @@ const TabList = () => {
           })}
         </TabsList>
         <TabsContent value="6 ශ්‍රේණිය">
-          Make changes to your account here.
+          <CardDemo />
         </TabsContent>
         <TabsContent value="account">to your account here.</TabsContent>
         <TabsContent value="7 ශ්‍රේණිය">Change your password here.</TabsContent>
