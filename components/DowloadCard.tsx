@@ -10,6 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
+import Image from "next/image";
+import Link from "next/link";
 
 const notifications = [
   {
@@ -26,53 +28,49 @@ const notifications = [
   },
 ];
 
-type CardProps = React.ComponentProps<typeof Card>;
+type CardProps = React.ComponentProps<typeof Card> & {
+  grade: string;
+  subject: string;
+  img: string;
+  description: string;
+  link: string;
+};
 
 export function CardDemo({ className, ...props }: CardProps) {
   return (
     <Card className={cn("w-[380px]", className)} {...props}>
       <CardHeader>
-        <CardTitle>Notifications</CardTitle>
-        <CardDescription>You have 3 unread messages.</CardDescription>
+        <CardTitle>
+          {props.grade} - {props.subject}
+        </CardTitle>
+        <CardDescription>{props.description}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className=" flex items-center space-x-4 rounded-md border p-4">
-          <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-              Push Notifications
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
-          </div>
-        </div>
-        <div>
-          {notifications.map((notification, index) => (
-            <div
-              key={index}
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-            >
-              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
-              <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
-                  {notification.title}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {notification.description}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className=" flex items-center space-x-4 rounded-md border p-4 ">
+          <Image
+            src={`/content${props.img}.png`}
+            width={200}
+            height={350}
+            alt={props.description}
+            priority={true}
+            className="rounded-md"
+          />
         </div>
       </CardContent>
       <CardFooter>
-        <div className="">
-          <Button className="w-full mb-2">
-            <DownloadCloudIcon className="mr-2 h-4 w-4 " /> Mark all as read
-          </Button>
-          <Button className="w-full mb-2">
-            <EyeIcon className="mr-2 h-4 w-4" /> Mark all as read
-          </Button>
+        <div className="mx-auto ">
+          <Link
+            href={`https://drive.google.com/uc?export=download&id=${props.link}`}
+          >
+            <Button className="w-full">
+              <DownloadCloudIcon className="mr-2 h-4 w-4 " /> බාගත කරගන්න
+            </Button>
+          </Link>
+          <Link href={`https://drive.google.com/file/d/${props.link}/view`}>
+            <Button className="w-full" variant={"secondary"}>
+              <EyeIcon className="mr-2 h-4 w-4" /> විවෘත කරන්න
+            </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>
