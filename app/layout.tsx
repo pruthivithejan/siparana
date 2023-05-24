@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import TabList from "@/components/TabList";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "සිප් අරණ",
@@ -65,6 +66,7 @@ export default function RootLayout({
           <Hero />
           <TabList />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

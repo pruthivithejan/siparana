@@ -12,9 +12,9 @@ import { CardDemo } from "./DowloadCard";
 
 const TabList = () => {
   return (
-    <div className="mt-10 flex justify-center ">
-      <Tabs defaultValue="account" className="w-[400px] ">
-        <TabsList className="justify-start">
+    <div className="my-10 flex justify-center">
+      <Tabs defaultValue="6 ශ්‍රේණිය" className="grid max-w-7xl mx-auto">
+        <TabsList className="justify-center">
           {Classes.map((cl, index) => {
             return (
               <TabsTrigger value={cl.class} key={index}>
@@ -24,27 +24,110 @@ const TabList = () => {
           })}
         </TabsList>
         <div className="flex flex-wrap justify-center">
-          <TabsContent
-            value="6 ශ්‍රේණිය"
-            className="grid grid-rows-4 grid-flow-col gap-4"
-          >
-            {Grade6.map((card, index) => {
-              return (
-                <CardDemo
-                  key={index}
-                  img={card.img}
-                  grade={card.grade}
-                  subject={card.subject}
-                  description={card.description}
-                  link={card.link}
-                />
-              );
-            })}
-          </TabsContent>
-          <TabsContent value="account">to your account here.</TabsContent>
-          <TabsContent value="7 ශ්‍රේණිය">
-            Change your password here.
-          </TabsContent>
+          <div className="overflow-hidden">
+            <TabsContent
+              value="6 ශ්‍රේණිය"
+              className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              {Grade6.map((card, index) => {
+                return (
+                  <CardDemo
+                    key={index}
+                    img={card.img}
+                    grade={card.grade}
+                    subject={card.subject}
+                    description={card.description}
+                    link={card.link}
+                  />
+                );
+              })}
+            </TabsContent>
+            <TabsContent
+              value="7 ශ්‍රේණිය"
+              className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              {Grade7.map((card, index) => {
+                return (
+                  <CardDemo
+                    key={index}
+                    img={card.img}
+                    grade={card.grade}
+                    subject={card.subject}
+                    description={card.description}
+                    link={card.link}
+                  />
+                );
+              })}
+            </TabsContent>
+            <TabsContent
+              value="8 ශ්‍රේණිය"
+              className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              {Grade8.map((card, index) => {
+                return (
+                  <CardDemo
+                    key={index}
+                    img={card.img}
+                    grade={card.grade}
+                    subject={card.subject}
+                    description={card.description}
+                    link={card.link}
+                  />
+                );
+              })}
+            </TabsContent>
+            <TabsContent
+              value="9 ශ්‍රේණිය"
+              className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              {Grade9.map((card, index) => {
+                return (
+                  <CardDemo
+                    key={index}
+                    img={card.img}
+                    grade={card.grade}
+                    subject={card.subject}
+                    description={card.description}
+                    link={card.link}
+                  />
+                );
+              })}
+            </TabsContent>
+            <TabsContent
+              value="10 ශ්‍රේණිය"
+              className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              {Grade10.map((card, index) => {
+                return (
+                  <CardDemo
+                    key={index}
+                    img={card.img}
+                    grade={card.grade}
+                    subject={card.subject}
+                    description={card.description}
+                    link={card.link}
+                  />
+                );
+              })}
+            </TabsContent>
+            <TabsContent
+              value="11 ශ්‍රේණිය"
+              className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              {Grade11.map((card, index) => {
+                return (
+                  <CardDemo
+                    key={index}
+                    img={card.img}
+                    grade={card.grade}
+                    subject={card.subject}
+                    description={card.description}
+                    link={card.link}
+                  />
+                );
+              })}
+            </TabsContent>
+          </div>
         </div>
       </Tabs>
     </div>
