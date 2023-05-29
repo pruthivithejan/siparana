@@ -14,35 +14,42 @@ const Footer = () => {
           </a>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                About
+              <a
+                href="https://github.com/pruthivithejan/siparana"
+                className="mr-4 hover:underline md:mr-6 "
+                target="_blank"
+              >
+                මූලාශ්‍ර කේතය
               </a>
             </li>
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                Licensing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact
+              <a
+                href="https://github.com/pruthivithejan/siparana/blob/main/LICENSE.md"
+                className="hover:underline"
+                target="_blank"
+              >
+                මෘදුකාංග බලපත්‍රය
               </a>
             </li>
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-left dark:text-gray-400">
             © {year}{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              සිප් අරණ.
+            <a href="/" className="hover:underline">
+              සිප් අරණ
             </a>
-            . සියලුම හිමිකම් ඇවිරිණි.
+            . සියලුම හිමිකම් ඇවිරිණි. <br />
+            කේතකරණය{" "}
+            <a
+              href="https://twitter.com/pruthivithejan"
+              className="hover:underline"
+              target="_blank"
+            >
+              පෘථිවි තේජාන්
+            </a>
+            .
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a

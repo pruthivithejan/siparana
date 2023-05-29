@@ -4,6 +4,14 @@ import * as React from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import {
+  Grade6,
+  Grade7,
+  Grade8,
+  Grade9,
+  Grade10,
+  Grade11,
+} from "@/lib/content";
 import { Button } from "@/components/ui/Button";
 import {
   Command,
