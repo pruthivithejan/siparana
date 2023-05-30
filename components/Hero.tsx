@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-x-hidden">
+    <div className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="container pt-32 max-w-7xl w-full mx-auto h-full">
         <div className="h-full gap-6 flex flex-col justify-start lg:justify-center items-center lg:items-start">
           <h1 className="text-5xl md:text-6xl font-bold text-center lg:text-7xl lg:text-left three-d text-emerald-500 dark:text-emerald-500">
