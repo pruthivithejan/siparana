@@ -33,7 +33,7 @@ export function CardDemo({ className, ...props }: CardProps) {
       <CardContent className="grid gap-4">
         <div className=" flex items-center space-x-4 rounded-md border p-4">
           <Image
-            src={`/content${props.img}.png`}
+            src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.png`}
             width={350}
             height={500}
             alt={props.description}
