@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
@@ -30,17 +29,17 @@ export function CardDemo({ className, ...props }: CardProps) {
         </CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
-      <div className="flex items-center space-x-4 rounded-md border p-4">
-        <Image
-          src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.png`}
-          width={350}
-          height={500}
-          alt={props.description}
-          priority={true}
-          className="rounded-md aspect-auto"
-        />
-      </div>
-      <CardFooter>
+      <CardContent>
+        <div className="flex items-center space-x-4 rounded-md border p-4">
+          <Image
+            src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.png`}
+            width={350}
+            height={500}
+            alt={props.description}
+            priority={true}
+            className="rounded-md aspect-auto"
+          />
+        </div>
         <div className="mx-auto ">
           <Link
             href={`https://drive.google.com/uc?export=download&id=${props.link}`}
@@ -58,7 +57,7 @@ export function CardDemo({ className, ...props }: CardProps) {
             </Button>
           </Link>
         </div>
-      </CardFooter>
+      </CardContent>
     </Card>
   );
 }
