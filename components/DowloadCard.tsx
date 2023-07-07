@@ -30,18 +30,16 @@ export function CardDemo({ className, ...props }: CardProps) {
         </CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-4">
-        <div className=" flex items-center space-x-4 rounded-md border p-4">
-          <Image
-            src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.png`}
-            width={350}
-            height={500}
-            alt={props.description}
-            priority={true}
-            className="rounded-md aspect-auto"
-          />
-        </div>
-      </CardContent>
+      <div className="flex items-center space-x-4 rounded-md border p-4">
+        <Image
+          src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.png`}
+          width={350}
+          height={500}
+          alt={props.description}
+          priority={true}
+          className="rounded-md aspect-auto"
+        />
+      </div>
       <CardFooter>
         <div className="mx-auto ">
           <Link
