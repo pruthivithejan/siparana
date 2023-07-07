@@ -12,7 +12,6 @@ const Navbar = () => {
           </span>
         </a>
         <div className="flex md:order-2 gap-4 items-center sm:gap-2">
-          <Search />
           <ModeToggle />
         </div>
       </div>
