@@ -30,7 +30,7 @@ export function CardDemo({ className, ...props }: CardProps) {
         </CardTitle>
         <CardDescription>{props.description}</CardDescription>
       </CardHeader>
-      <div className="flex items-center space-x-4 rounded-md border p-4">
+      <div className="flex items-center space-x-4 rounded-md p-4">
         <Image
           src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.webp`}
           width={350}

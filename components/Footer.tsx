@@ -43,7 +43,7 @@ const Footer = () => {
             . සියලුම හිමිකම් ඇවිරිණි. <br />
             කේතකරණය{" "}
             <a
-              href="https://twitter.com/pruthivithejan"
+              href="https://ruthivithejan.me"
               className="hover:underline"
               target="_blank"
             >
