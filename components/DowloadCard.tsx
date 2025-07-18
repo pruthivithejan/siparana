@@ -1,6 +1,7 @@
 import { DownloadCloudIcon, EyeIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { getContentImageSrc } from "@/lib/images";
 import { Button } from "@/components/ui/Button";
 import {
   Card,
@@ -32,7 +33,7 @@ export function CardDemo({ className, ...props }: CardProps) {
       </CardHeader>
       <div className="flex items-center space-x-4 rounded-md p-4">
         <Image
-          src={`https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${props.img}.webp`}
+          src={getContentImageSrc(props.img)}
           width={350}
           height={500}
           alt={props.description}

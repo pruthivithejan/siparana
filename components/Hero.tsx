@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getStaticImage } from "@/lib/images";
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
               style={{ objectFit: "contain" }}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 768px) 50vw, 33vw"
-              src="/illustration.webp"
+              src={getStaticImage("illustration")}
               alt="Classroom illustration"
               />
             </div>

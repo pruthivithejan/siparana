@@ -16,9 +16,9 @@ const TabList = () => {
     <div className="my-10 w-full">
       <Tabs defaultValue="6 ශ්‍රේණිය" className="w-full max-w-7xl mx-auto">
         <div className="flex justify-center w-full mb-6 px-4">
-          <TabsList className="flex flex-wrap justify-center gap-2 w-auto mx-auto max-w-full h-auto p-2">
+          <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 w-fit mx-auto max-w-full">
             {Classes.map((cl, index) => (
-              <TabsTrigger value={cl.class} key={index} className="text-xs sm:text-sm px-2 sm:px-3 flex-shrink-0">
+              <TabsTrigger value={cl.class} key={index} className="text-xs sm:text-sm px-2 sm:px-3">
                 {cl.class}
               </TabsTrigger>
             ))}

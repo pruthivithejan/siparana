@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { getStaticImage } from "@/lib/images";
 import { Icons } from "@/components/Icons";
 
 const Footer = () => {
@@ -7,7 +9,14 @@ const Footer = () => {
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a href="/" className="flex items-center">
-            <img src="/siparana.svg" className="h-8 mr-3" alt="Siparana Logo" />
+            <Image 
+              src={getStaticImage("logo")} 
+              width={32} 
+              height={32} 
+              className="h-8 mr-3" 
+              alt="Siparana Logo" 
+              priority
+            />
             <span className="self-center text-emerald-500 text-2xl font-semibold whitespace-nowrap hidden md:flex">
               සිප් අරණ
             </span>
