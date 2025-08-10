@@ -4,7 +4,7 @@ import { getStaticImage } from "@/lib/images";
 
 const Hero = () => {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden py-28 md:py-36">
+  <div className="relative flex items-center justify-center overflow-hidden py-28 md:py-36 pb-40 sm:pb-48 mb-10">
       <div className="container max-w-4xl w-full mx-auto flex flex-col items-center text-center gap-6 px-4">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold three-d text-emerald-500 dark:text-emerald-500 leading-tight">
           සිප් අරණ <br />
@@ -16,7 +16,7 @@ const Hero = () => {
         <p className="max-w-prose text-slate-700 dark:text-slate-300 mb-2">
           දැනුම තුළින් යහපත් සමාජයක් උදෙසා, අම්පාර අධ්‍යාපන කලාපයේ පමණක් නොව මුලු සිරිලක දැයේ දරුවන්හට පිදෙන අධ්‍යාපන සත්කාරයයි !
         </p>
-        <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square">
+  <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl aspect-square">
           <Image
             priority
             className="img-shadow"
