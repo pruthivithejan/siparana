@@ -52,7 +52,7 @@ const Footer = () => {
             . සියලුම හිමිකම් ඇවිරිණි. <br />
             කේතකරණය{" "}
             <a
-              href="https://ruthivithejan.me"
+              href="https://pruthivithejan.me"
               className="hover:underline"
               target="_blank"
             >
