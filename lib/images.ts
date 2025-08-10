@@ -1,6 +1,11 @@
 // Static image imports for build-time optimization
-import illustrationImg from '../public/illustration.webp';
-import siparanaLogo from '../public/siparana.svg';
+// NOTE: In Next.js you normally don't import from public/ directly for runtime <Image src="/file" /> usage.
+// Importing large sets of images increases bundle size. Keep only truly required imports here.
+// For now we keep illustration via path to let Next handle it without bundling binary.
+
+// Prefer just using path string instead of importing binary (avoids bundling the asset):
+const illustrationImg = '/illustration.webp';
+const siparanaLogo = '/siparana.svg';
 
 // Export commonly used static images
 export const staticImages = {
@@ -11,16 +16,11 @@ export const staticImages = {
 // For content images, we'll create a helper function that provides static imports
 // This approach ensures build-time optimization while maintaining type safety
 export function getContentImageSrc(imagePath: string): string {
-  // For static optimization, we import images that are available locally
-  // This replaces the CDN approach for better performance
-  
-  try {
-    // Dynamic import for local images - Next.js will optimize these at build time
-    return `${imagePath}.webp`;
-  } catch (error) {
-    // Fallback to original CDN if local image is not available
-    return `https://cdn.jsdelivr.net/gh/pruthivithejan/siparana@master/public/content${imagePath}.webp`;
-  }
+  // imagePath comes in like: /grade6/grade6-math
+  // Files physically live in: public/content/grade6/grade6-math.webp
+  // Public URL therefore must be: /content/grade6/grade6-math.webp
+  const localPath = `/content${imagePath}.webp`;
+  return localPath;
 }
 
 // Type definitions for better TypeScript support
