@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     // Remove CDN patterns since we're using static imports
     // This allows Next.js to optimize local images at build time
+    unoptimized: true, // Disables all image optimizations globally
     formats: ['image/webp', 'image/avif'],
     remotePatterns: [
       // Keep CDN as fallback only
